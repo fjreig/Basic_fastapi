@@ -4,6 +4,9 @@ import jwt
 from decouple import config
 import os
 
+JWT_SECRET = os.environ['JWT_SECRET']
+JWT_ALGORITHM = os.environ['JWT_ALGORITHM']
+
 def token_response(token: str):
     return {
         "access_token": token
